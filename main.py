@@ -1,6 +1,7 @@
 import os
 import configparser
 import praw
+from praw.models import MoreComments
 
 # read/set environment and praw variables
 config = configparser.ConfigParser()
@@ -13,7 +14,21 @@ reddit = praw.Reddit(
     user_agent=config['Reddit']['USER_AGENT']
 )
 
-print(reddit.read_only)
+# get comment content
+def addComment(comment):
+    id = comment.id
+    text = comment.body
+    print(text)
 
-for submission in reddit.subreddit("test").hot(limit=10):
-    print(submission.title)
+def getContentFromPost(submission):
+    for comment in submission.comments:
+        if isinstance(comment, MoreComments):
+            continue
+        if(len(comment.body.split()) > 60):
+            continue
+        addComment(comment)
+
+for submission in reddit.subreddit("askReddit").hot(limit=1):
+    if(submission.over_18):
+        continue
+    getContentFromPost(submission)
