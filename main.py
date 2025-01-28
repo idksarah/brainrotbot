@@ -11,7 +11,6 @@ reddit = praw.Reddit(
     client_id=os.getenv('reddit_id'),
     client_secret=os.getenv('reddit_secret'),
     user_agent=config['Reddit']['USER_AGENT']
-
 )
 
 # get comment content
