@@ -22,7 +22,7 @@ def addComment(comment):
 
 def getContentFromPost(submission):
     submission.coment_sort = "top"
-    submission.comment_limit = 1
+    submission.comment_limit = 3 
     submissionComments = submission.comments
     for comment in submissionComments:
         if isinstance(comment, MoreComments):
@@ -39,3 +39,9 @@ for submission in reddit.subreddit("askReddit").hot(limit=None):
     break
 
 getContentFromPost(submission)
+
+# gets text from post
+
+#hi !! so this is an incomplete version of a bot that is meant to take content from reddit posts and turn it into a video. i already have the program mapped out: use praw to scrape reddit, create a tts file, take screenshots using selenium, and combine it using moviepy, but this is just what i got done before high seas finished :((()))
+
+#so this file ^^

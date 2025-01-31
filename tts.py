@@ -1,8 +1,9 @@
 import pyttsx3
 import string
-# from yapper import Yapper
 
 voiceoverDir = "voiceovers"
+
+# creates a tts file for given input
 
 engine = pyttsx3.init()
 voices = engine.getProperty('voices')
@@ -16,3 +17,7 @@ def create_voice_over(filename, rawText):
     engine.save_to_file(text, filePath)
     engine.runAndWait()
     return(filePath)
+
+create_voice_over("hello there", "what is up")
+
+#this is the tts script. its imported in main.py to create new .wavs for each new comment, but this is just a test. 
