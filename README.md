@@ -1,11 +1,6 @@
-notes for mee
--assembly ai for subtitles
--selenium for screenshots
--moviepy make clips
--include users in description
+<h1> to run, clone this repo and in ur terminal run</h1>
+- pip install praw
+- pip install moviepy
+- pip install selenium
 
--take content from reddit post, create mp3, create subtitles, sync subtitles and audio in movie, post to yt
--fo subtitles,get # of char and multiple by a time consntant. leave it on screen for that long before going to the next. max # of char on screen
--just have 2 words on screen at a time cause what the fcuk
--if an api to add subtitles over a video doesnt exist just do it ureslf. just add on to moviepy i guess 
--download some 20min miencraft parkour video and take random clips from it
+hi !! so this is an incomplete version of a bot that is meant to take content from reddit posts and turn it into a video. i already have the program mapped out: use praw to scrape reddit, create a tts file, take screenshots using selenium, and combine it using moviepy, but this is just what i got done before high seas finished :((()))

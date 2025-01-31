@@ -19,5 +19,3 @@ def create_voice_over(filename, rawText):
     return(filePath)
 
 create_voice_over("hello there", "what is up")
-
-#this is the tts script. its imported in main.py to create new .wavs for each new comment, but this is just a test. 
